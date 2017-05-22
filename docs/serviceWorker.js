@@ -3,10 +3,10 @@ this.addEventListener('install', function(event) {
     caches.open('v1').then(function(cache) {
       return cache.addAll([
         '/',
-        'index.html',
-        'static/css/main.6ee84dcf.css',
-        'static/js/main.1ef122aa.js',
-        'todo.jpg'
+        '/index.html',
+        '/static/css/main.6ee84dcf.css',
+        '/static/js/main.1ef122aa.js',
+        '/todo.jpg'
       ]);
     })
   );
