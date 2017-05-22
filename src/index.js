@@ -7,25 +7,18 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducers from './reducers'
 import './css/index.css'
+import {saveData, readData } from './utils/localStorage'
 
 injectTapEventPlugin()
 
 
-const initialState = {
-  todos:[
-    {
-      id: 0,
-      text: 'todo1',
-      completed: false
-    }, {
-      id: 1,
-      text: 'todo2',
-      completed: false
-    }
-  ]
-}
+const initialState = readData()
 
 const store = createStore(reducers, initialState)
+
+store.subscribe(() => {
+  saveData(store.getState())
+})
 
 const App = () => (
   <MuiThemeProvider>
