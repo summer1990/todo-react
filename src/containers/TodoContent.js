@@ -11,7 +11,6 @@ class TodoContent extends PureComponent {
     const visibleTodos = getVisibleTodos(todos, filter)
     return (
           <TodoList 
-            style={this.props.style}
             todos={visibleTodos}
             onToggle={actions.toggleTodo} 
             onDelete={actions.deleteTodo} />  

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <script src="%PUBLIC_URL%/serviceWorker.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -30,7 +31,7 @@
 
      <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/todo-react/serviceWorker.js', { scope: '/todo-react/'}).then(function(req) {
+        navigator.serviceWorker.register('/todo-react/serviceWorker.js',{scope: '/todo-react/'}).then(function(req) {
           console.log('Registration succeeded.');
         }).catch(function(error) {
           console.log('Registration failed with ' + error);
