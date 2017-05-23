@@ -2,6 +2,7 @@ this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
+        '/todo-react/',
         '/todo-react/index.html',
         '/todo-react/static/css/main.6ee84dcf.css',
         '/todo-react/static/js/main.70b8a2ad.js',
